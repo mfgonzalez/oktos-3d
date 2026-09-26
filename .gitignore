@@ -1,0 +1,27 @@
+node_modules/
+server/node_modules/
+client/node_modules/
+
+# SQLite data
+server/data/*.sqlite
+server/data/*.sqlite-journal
+server/data/*.sqlite-wal
+server/data/*.sqlite-shm
+
+# Build artifacts
+client/dist/
+server/dist/
+
+# Env / secrets
+.env
+.env.local
+
+# Logs
+npm-debug.log*
+*.log
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
