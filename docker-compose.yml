@@ -1,0 +1,13 @@
+services:
+  oktos-3d:
+    build: .
+    container_name: oktos-3d
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+    volumes:
+      # Persist the SQLite database outside the container.
+      - ./data:/app/server/data
+    environment:
+      - PORT=4000
+      - OKTOS_DB_PATH=/app/server/data/oktos.sqlite
