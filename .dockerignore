@@ -1,0 +1,23 @@
+# Keep host-platform artifacts out of the Docker build context so the
+# image's own `npm install` (run inside the Linux build stage) is never
+# clobbered by a locally-installed node_modules (which may contain native
+# addons, e.g. better-sqlite3, built for a different OS/architecture).
+
+node_modules/
+server/node_modules/
+client/node_modules/
+
+client/dist/
+server/dist/
+
+server/data/
+.git/
+.gitignore
+
+npm-debug.log*
+*.log
+
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
